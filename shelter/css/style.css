@@ -182,7 +182,8 @@ header {
 
 #about h3,
 #our-friends h3,
-#help h3 {
+#help h3,
+#in-addition h3 {
   width: 70%;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
@@ -367,4 +368,72 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+#in-addition {
+  background: #f6f6f6;
+}
+
+.in-addition-wrapper {
+  max-width: 1200px;
+  height: 462px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.in-addition-pic {
+  width: 505px;
+  height: 261px;
+  background-image: url(../images/donation-dog.png)
+}
+
+.in-addition-info {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#in-addition p {
+  width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px;
+  color: #b2b2b2;
+}
+
+.credit-card a {
+  width: 349px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: #f1cdb3;
+  border-radius: 9px;
+  /* padding: 10px 15px; */
+}
+
+.credit-card h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+#in-addition h5 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
