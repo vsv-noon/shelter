@@ -70,6 +70,12 @@ header {
   font-weight: 400;
   line-height: 24px;
   color: #FAFAFA;
+  transition: all 0.5s ease;
+}
+
+.nav-menu a:hover {
+  color: #fddcc4;
+  ;
 }
 
 .nav-menu ul {
@@ -135,7 +141,11 @@ header {
   color: #292929;
   background: #f1cdb3;
   border-radius: 30px;
+  transition: all 0.5s ease;
+}
 
+.start-screen-info a:hover {
+  background: #fddcc4;
 }
 
 .start-screen-pic {
@@ -171,7 +181,8 @@ header {
 }
 
 #about h3,
-#our-friends h3 {
+#our-friends h3,
+#help h3 {
   width: 70%;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
@@ -181,6 +192,11 @@ header {
   letter-spacing: 2.65px;
   word-spacing: 5px;
   color: #545454;
+}
+
+#our-friends h3 {
+  max-width: 30%;
+  text-align: center;
 }
 
 .about-info p {
@@ -205,11 +221,6 @@ header {
   gap: 60px;
 }
 
-#our-friends h3 {
-  max-width: 30%;
-  text-align: center;
-}
-
 .our-friends-button {
   width: 261px;
   height: 52px;
@@ -224,6 +235,11 @@ header {
   color: #292929;
   background: #f1cdb3;
   border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.our-friends-button:hover {
+  background: #fddcc4;
 }
 
 .our-friends-slider {
@@ -241,7 +257,15 @@ header {
   justify-content: center;
   align-items: center;
   border: 2px solid #f1cdb3;
-  border-radius: 50%
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.slider-arrow-left:hover,
+.slider-arrow-right:hover {
+  border: #fddcc4;
+  background: #fddcc4;
 }
 
 .slider-wrapper {
@@ -293,4 +317,54 @@ header {
   color: #292929;
   border: 2px solid #f1cdb3;
   border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.slide:hover .slide-button {
+  border: #fddcc4;
+  background: #fddcc4;
+}
+
+.help-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#help h3 {
+  max-width: 30%;
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+
+#help h4 {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.ul-help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+  margin-bottom: 100px;
+}
+
+.help-item {
+  width: 101px;
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
