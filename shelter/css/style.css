@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ header {
 }
 
 .logo {
-  width: 184px;
+  width: 187px;
   height: 60px;
 }
 
@@ -42,20 +44,20 @@ header {
 }
 
 .logo h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 35.2px;
-  letter-spacing: 2.65px;
+  letter-spacing: 0.06em;
   color: #F1CDB3;
 }
 
 .logo h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 13.5px;
   font-weight: 400;
   line-height: 14.95px;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.1em;
   color: #fff;
 }
 
@@ -65,7 +67,7 @@ header {
 }
 
 .nav-menu a {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -110,17 +112,16 @@ header {
 
 .start-screen-info h2 {
   width: 75%;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 44px;
   font-weight: 400;
   line-height: 57.2px;
-  letter-spacing: 1.6px;
   color: #fff;
 }
 
 .start-screen-info p {
   width: 94%;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -133,7 +134,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22.1px;
@@ -158,16 +159,16 @@ header {
 
 .about-wrapper {
   max-width: 1200px;
-  height: 568px;
+  height: 588px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 120px;
-  margin-bottom: 20px;
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
 
-.about-pets {
+.about-pic {
   width: 300px;
   height: 408px;
   background-image: url(../images/about-pets.png);
@@ -177,21 +178,20 @@ header {
   width: 430px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 24px;
+  padding-top: 15px;
 }
 
 #about h3,
 #our-friends h3,
 #help h3,
 #in-addition h3 {
-  width: 70%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 79%;
+  font-family: Georgia, serif;
   font-size: 35px;
   font-weight: 400;
   line-height: 45.5px;
-  /* letter-spacing: 0.06em; */
-  letter-spacing: 2.65px;
-  word-spacing: 5px;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 
@@ -201,7 +201,7 @@ header {
 }
 
 .about-info p {
-  font-family: Arial;
+  font-family: Arial,sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -214,12 +214,12 @@ header {
 
 .our-friends-wrapper {
   min-width: 1200px;
-  height: 857px;
+  height: 877px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 60px;
+  padding-top: 80px;
 }
 
 .our-friends-button {
@@ -228,7 +228,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22.1px;
@@ -295,7 +295,7 @@ header {
 }
 
 .slide h4 {
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 22.72px;
@@ -309,7 +309,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22.1px;
@@ -328,21 +328,23 @@ header {
 
 .help-wrapper {
   max-width: 1200px;
+  height: 611px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  gap: 30px;
 }
 
 #help h3 {
   max-width: 30%;
   text-align: center;
-  margin: 80px 0 60px 0;
+  margin: 80px 0 5px 0;
 }
 
 #help h4 {
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
@@ -354,24 +356,22 @@ header {
 .ul-help {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 120px;
   margin-bottom: 100px;
 }
 
 .help-item {
-  width: 101px;
   height: 113px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 30px;
+  margin: 26px 60px;
 }
 
 #in-addition {
   background: #f6f6f6;
+
 }
 
 .in-addition-wrapper {
@@ -380,27 +380,27 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 30px;
+  padding-top: 80px;
 }
 
 .in-addition-pic {
   width: 505px;
   height: 261px;
-  background-image: url(../images/donation-dog.png)
+  background-image: url(../images/donation-dog.png);
+  margin-top: 10px;
 }
 
 .in-addition-info {
-  width: 34%;
+  width: 32%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
 }
 
 #in-addition p {
   width: 90%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
@@ -421,8 +421,9 @@ header {
 }
 
 .credit-card h4 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   font-size: 20px;
+  font-style: normal;
   font-weight: 400;
   line-height: 23px;
   letter-spacing: 0.06em;
@@ -430,10 +431,15 @@ header {
 }
 
 #in-addition h5 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 16.5px;
   letter-spacing: 0.06em;
   color: #545454;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  height: 350px;
 }
