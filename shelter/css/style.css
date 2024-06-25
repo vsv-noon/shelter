@@ -200,8 +200,9 @@ html {
   padding-top: 15px;
 }
 
+.our-friends-pets h3,
 #about h3,
-#our-friends h3,
+.our-friends-main h3,
 #help h3,
 #in-addition h3 {
   width: 79%;
@@ -213,20 +214,20 @@ html {
   color: #545454;
 }
 
-#our-friends h3 {
+.our-friends-main h3 {
   max-width: 30%;
   text-align: center;
 }
 
 .about-info p {
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
 }
 
-#our-friends {
+.our-friends-main {
   background: #f6f6f6;
 }
 
@@ -294,6 +295,13 @@ html {
   overflow: hidden;
 }
 
+.tabs-wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-item,
 .slide {
   width: 270px;
   height: 435px;
@@ -305,13 +313,16 @@ html {
   background: #fafafa;
   border-radius: 9px;
   padding-bottom: 30px;
+  cursor: pointer;
 }
 
+.tab-item-img,
 .slide-img {
   width: 270px;
   height: 270px;
 }
 
+.tab-item h4,
 .slide h4 {
   font-family: Georgia, serif;
   font-size: 20px;
@@ -321,6 +332,7 @@ html {
   text-align: center;
 }
 
+.tab-item-button,
 .slide-button {
   width: 187px;
   height: 52px;
@@ -338,6 +350,7 @@ html {
   transition: all 0.5s ease;
 }
 
+.tab-item:hover .tab-item-button,
 .slide:hover .slide-button {
   border: #fddcc4;
   background: #fddcc4;
@@ -469,30 +482,28 @@ footer {
   margin: 0 auto;
   height: 350px;
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   padding-top: 40px;
 }
 
 .footer-div h3 {
-font-family: Georgia, serif;
-font-size: 35px;
-font-weight: 400;
-line-height: 45.5px;
-letter-spacing: 0.06em;
-text-align: left;
-color: rgba(255, 255, 255, 1);
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer-div h4 {
-font-family: Georgia;
-font-size: 20px;
-font-weight: 400;
-line-height: 23px;
-letter-spacing: 0.06em;
-text-align: left;
-color: #f1cdb3;
-transition: all 0.5s ease;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #f1cdb3;
+  transition: all 0.5s ease;
 }
 
 .footer-link {
@@ -504,7 +515,7 @@ transition: all 0.5s ease;
 
 .footer-link:hover h4 {
   color: #fddcc4;
-  scale: 0.9;
+  scale: 0.95;
 }
 
 .footer-div svg path {
@@ -513,7 +524,7 @@ transition: all 0.5s ease;
 
 .footer-div a:hover svg path {
   fill: #fddcc4;
-  scale: 0.9;
+  scale: 0.95;
 }
 
 .footer-div {
@@ -533,4 +544,90 @@ transition: all 0.5s ease;
   flex-direction: column;
   gap: 33px;
   margin-right: 160px;
+}
+
+/* Pets.html */
+
+.our-friends-pets {
+  background: #f6f6f6;
+}
+
+.our-friends-wrapper-pets {
+  max-width: 1200px;
+  height: 1342px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.tabs-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.tabs-top-row,
+.tabs-bottom-row {
+  display: flex;
+  gap: 40px;
+}
+
+.our-friends-pets h3 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tab-item:last-child {
+  margin-right: 0;
+}
+
+.tabs-pagination {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-left-left,
+.btn-left,
+.btn-current-item,
+.btn-right,
+.btn-right-right {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-left-left:hover,
+.btn-left:hover,
+.btn-current-item:hover,
+.btn-right:hover,
+.btn-right-right:hover {
+  border: #fddcc4;
+  background: #fddcc4;
+}
+
+.tabs-pagination .disabled {
+  pointer-events: none;
+  border: 2px solid #cdcdcd;
+}
+
+.tabs-pagination .disabled svg path {
+  fill: #cdcdcd;
+}
+
+.tabs-pagination h4 {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #292929;
+
 }
