@@ -1,0 +1,129 @@
+/* @media (max-width: 768px) { */
+@media (max-width: 1275px) {
+  .header-wrapper {
+    width: 92%;
+  }
+
+  .start-screen-wrapper,
+  .our-friends-wrapper,
+  .help-wrapper,
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-wrapper,
+  .in-addition-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .start-screen-info {
+    width: 63.1%;
+    margin-top: 150px;
+  }
+
+  .start-screen-info p {
+    width: 100%;
+  }
+
+  .start-screen-img {
+    width: 569px;
+    width: 100%;
+    height: 593px;
+    background-position: right;
+    /* background-size: contain; */
+    margin-top: 100px;
+  }
+
+  .start-screen-info span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 65px;
+  }
+
+  .about-info {
+    width: 58.8%;
+  }
+
+  .our-friends-slider {
+    width: 708px;
+    height: 435px;
+    gap: 12px;
+  }
+
+  .slider-wrapper {
+    width: 580px;
+    gap: 40px;
+  }
+
+  .help-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .ul-help {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 73px;
+    row-gap: 55px;
+  }
+
+  #help h3 {
+    width: 50%;
+  }
+
+  .help-item {
+    margin: 0;
+  }
+
+  .in-addition-wrapper {
+    padding-bottom: 99px;
+  }
+
+  .in-addition-info {
+    width: 52%;
+    padding-bottom: 20px;
+  }
+
+  .footer-wrapper {
+    padding-top: 15px;
+  }
+
+  .footer-info {
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    margin-bottom: 60px;
+  }
+
+  .tabs-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
+
+  .our-friends-pets h3 {
+    padding-bottom: 30px;
+  }
+
+  .tabs-pagination {
+    margin-top: 10px;
+  }
+
+  .our-friends-wrapper-pets {
+    padding-bottom: 75px;
+  }
+}
