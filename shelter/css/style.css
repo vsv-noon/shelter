@@ -110,7 +110,7 @@ html {
 
 .start-screen {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   /* height: 908px; */
   background: url(../images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -122,12 +122,14 @@ html {
   background-image: url(../images/start-screen-puppy.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom;
   margin-top: 180px;
 }
 
 .start-screen-wrapper {
   max-width: 1200px;
   width: 95%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
 }
@@ -204,22 +206,72 @@ html {
   padding-top: 15px;
 }
 
+h3 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+
+}
+
 .our-friends-pets h3,
 #about h3,
 .our-friends-main h3,
 #help h3,
 #in-addition h3 {
   width: 79%;
-  font-family: Georgia, serif;
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 45.5px;
-  letter-spacing: 0.06em;
   color: #545454;
 }
 
 .our-friends-main h3 {
   text-align: center;
+}
+
+#help h3 {
+  width: 30%;
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+
+.footer-div h3 {
+  text-align: left;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+.tab-item h4,
+.slide h4 {
+  text-align: center;
+}
+
+#help h4 {
+  text-align: center;
+  color: #545454;
+}
+
+.credit-card h4 {
+  color: #545454;
+}
+
+.tabs-pagination h4 {
+  color: #292929;
+}
+
+#in-addition h5 {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .about-info p {
@@ -299,9 +351,7 @@ html {
   max-width: 990px;
   width: 95%;
   display: flex;
-  /* flex-direction: row; */
   gap: 90px;
-  /* gap: 9%; */
   overflow: hidden;
 }
 
@@ -324,16 +374,6 @@ html {
 .slide-img {
   width: 270px;
   height: 270px;
-}
-
-.tab-item h4,
-.slide h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22.72px;
-  letter-spacing: 0.06em;
-  text-align: center;
 }
 
 .tab-item-button,
@@ -367,22 +407,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#help h3 {
-  width: 30%;
-  text-align: center;
-  margin: 80px 0 60px 0;
-}
-
-#help h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #545454;
 }
 
 .ul-help {
@@ -459,25 +483,6 @@ html {
   background: #fddcc4;
 }
 
-.credit-card h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
-
-#in-addition h5 {
-  font-family: Georgia, serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 16.5px;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
-
 footer {
   width: 100%;
   height: 100%;
@@ -489,34 +494,14 @@ footer {
   width: 95%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   padding-top: 40px;
 }
 
 .footer-info {
-  width: 100%;
+  width: 73.5%;
   display: flex;
-  gap: 15%;
-}
-
-.footer-div h3 {
-  font-family: Georgia, serif;
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 45.5px;
-  letter-spacing: 0.06em;
-  text-align: left;
-  color: rgba(255, 255, 255, 1);
-}
-
-.footer-div h4 {
-  font-family: Georgia;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  text-align: left;
-  color: #f1cdb3;
-  transition: all 0.5s ease;
+  gap: 160px;
 }
 
 .footer-link {
@@ -531,6 +516,12 @@ footer {
   scale: 0.95;
 }
 
+.footer-div h4 {
+  text-align: left;
+  color: #f1cdb3;
+  transition: all 0.5s ease;
+}
+
 .footer-div svg path {
   transition: all 0.5s ease;
 }
@@ -541,17 +532,18 @@ footer {
 }
 
 .footer-div {
-  width: 302px;
   padding-top: 15px;
 }
 
 .footer-div.left-column {
+  width: 279px;
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
 .footer-div.right-column {
+  width: 302px;
   display: flex;
   flex-direction: column;
   gap: 33px;
@@ -561,6 +553,11 @@ footer {
 
 .our-friends-pets {
   background: #f6f6f6;
+}
+
+.our-friends-pets h3 {
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .our-friends-wrapper-pets {
@@ -576,14 +573,12 @@ footer {
 
 .tabs-wrapper {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 0;
+  overflow: hidden;
   column-gap: 40px;
   row-gap: 30px;
-}
-
-.our-friends-pets h3 {
-  text-align: center;
-  padding-bottom: 60px;
 }
 
 .tab-item:last-child {
@@ -628,13 +623,4 @@ footer {
 
 .tabs-pagination .disabled svg path {
   fill: #cdcdcd;
-}
-
-.tabs-pagination h4 {
-  font-family: Georgia;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #292929;
 }

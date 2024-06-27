@@ -4,7 +4,6 @@
     width: 92%;
   }
 
-  .start-screen-wrapper,
   .our-friends-wrapper,
   .help-wrapper,
   .footer-wrapper {
@@ -24,16 +23,7 @@
   }
 
   .start-screen-info p {
-    width: 100%;
-  }
-
-  .start-screen-img {
-    width: 569px;
-    width: 100%;
-    height: 593px;
-    background-position: right;
-    /* background-size: contain; */
-    margin-top: 100px;
+    width: 90%;
   }
 
   .start-screen-info span {
@@ -101,15 +91,29 @@
   }
 
   .footer-info {
-    width: 88%;
+    width: 708px;
     display: flex;
     justify-content: center;
-    gap: 6%;
+     gap: 60px;
     margin-bottom: 60px;
   }
 
+  .footer-div.left-column {
+    width: 279px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .footer-div.right-column {
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+  }
+
   .tabs-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-auto-rows: 0;
     overflow: hidden;
@@ -126,4 +130,324 @@
   .our-friends-wrapper-pets {
     padding-bottom: 75px;
   }
+}
+
+@media (max-width: 950px) {
+  .tabs-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 900px) {
+  .start-screen-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .start-screen-img {
+    width: 569px;
+    width: 100%;
+    height: 593px;
+    background-position: right;
+    background-size: contain;
+    margin-top: 100px;
+  }
+
+  .start-screen-info p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .nav-menu ul {
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    background: #111010;
+    top: 0;
+    right: -100%;
+    display: none;
+  }
+
+  .hamburger-menu {
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-line {
+    width: 30px;
+    height: 2px;
+  }
+
+  .light {
+    background: #f1cdb3;
+  }
+
+  .dark {
+    background: #000000;
+  }
+
+  .our-friends-slider {
+    position: relative;
+    width: 270px;
+    height: 507px;
+  }
+
+  .slider-arrow-left {
+    position: absolute;
+    bottom: -7%;
+    left: 45px;
+  }
+
+  .slider-arrow-right {
+    position: absolute;
+    bottom: -7%;
+    right: 45px;
+  }
+
+  .footer-info {
+    width: 98%;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 40px;
+  }
+
+  .footer-div.left-column {
+    width: 82%;
+    align-items: start;
+  }
+
+  .footer-div.right-column {
+    width: 99%;
+    align-items: start;
+    gap: 40px;
+  }
+}
+
+/* @media (max-width: 320px) { */
+@media (max-width: 600px) {
+
+  .start-screen h2 {
+    font-family: Georgia;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .our-friends-pets h3,
+  #about h3,
+  .our-friends-main h3,
+  #help h3,
+  #in-addition h3 {
+    font-family: Georgia;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .about-info p {
+    text-align: justify;
+  }
+
+  .in-addition-info {
+    align-items: center;
+  }
+
+  .in-addition-img {
+    /* width: 260px; */
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header-wrapper {
+    width: 87%;
+  }
+
+  .start-screen-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .start-screen-info p {
+    text-align: center;
+  }
+
+  .start-screen-img {
+    width: 260px;
+    width: 100%;
+    height: 271px;
+    background-position: right;
+    /* background-size: contain; */
+    margin-top: 105px;
+  }
+
+  .about-wrapper {
+    width: 86%;
+    gap: 40px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+  }
+
+  .about-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .about-img {
+    width: 260px;
+    width: 100%;
+    height: 353px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .our-friends-wrapper {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 42px;
+    gap: 0;
+  }
+
+  .our-friends-main h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .our-friends-slider {
+    margin-bottom: 79px;
+  }
+
+  .slide {
+    margin: 0;
+  }
+
+  .help-wrapper {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+  }
+
+  #help h3 {
+    width: 80%;
+    margin-top: 42px;
+    padding-bottom: 0;
+    margin-bottom: 41px;
+  }
+
+  #help h4 {
+    font-size: 15px;
+    line-height: 16.5px;
+  }
+
+  .ul-help {
+    width: 100%;
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 4px;
+    margin-bottom: 14px;
+  }
+
+  .help-item {
+    gap: 20px;
+  }
+
+  .ul-help img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .in-addition-wrapper {
+    width: 97%;
+    padding-top: 44px;
+    padding-bottom: 41px;
+  }
+
+  .in-addition-info {
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  #in-addition h3 {
+    width: 100%;
+  }
+
+  .credit-card a {
+    width: 281px;
+  }
+
+  .credit-card h4 {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.5px;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+
+  #in-addition h5 {
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .in-addition-img {
+    width: 260px;
+    height: 135px;
+  }
+
+  .footer-div h3 {
+    width: 98%;
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+  }
+
+  .footer-img {
+    width: 260px;
+    height: 269px;
+  }
+
+  .our-friends-wrapper-pets {
+    padding-top: 44px;
+  }
+
+  .our-friends-pets h3 {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .tabs-wrapper {
+    height: 1350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 0;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+
+  .our-friends-wrapper-pets {
+    padding-bottom: 40px;
+  }
+
+  .tabs-pagination {
+    gap: 10px;
+  }
+
 }
