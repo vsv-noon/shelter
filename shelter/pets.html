@@ -9,6 +9,7 @@
   <title>Shelter</title>
 </head>
 <body>
+  <div class="overlay"></div>
   <header class="header">
     <div class="header-wrapper">
       <div class="logo nav-pets-page">
@@ -18,13 +19,14 @@
         </a>
       </div>
       <nav class="nav-menu nav-pets-page">
-        <ul>
-          <li class="nav-link"><a href="./index.html"> About the shelter</a></li>
-          <li class="nav-link nav-active"><a href="./pets.html">Our pets</a></li>
-          <li class="nav-link"><a href="./index.html#help">Help the shelter</a></li>
-          <li class="nav-link"><a href="#footer">Contacts</a></li>
+        <ul class="nav-menu-list light">
+          <li><a class="nav-link" href="./index.html"> About the shelter</a></li>
+          <!-- <li><a class="nav-link nav-active" href="./pets.html">Our pets</a></li> -->
+          <li class="nav-active">Our pets</li>
+          <li><a class="nav-link" href="./index.html#help">Help the shelter</a></li>
+          <li><a class="nav-link" href="#footer">Contacts</a></li>
         </ul>
-        <div class="hamburger-menu">
+        <div class="hamburger-button">
           <span class="hamburger-line dark"></span>
           <span class="hamburger-line dark"></span>
           <span class="hamburger-line dark"></span>
@@ -170,7 +172,7 @@
       <img class="footer-img" src="./images/footer-puppy.png" alt="footer-puppy">
     </div>
   </footer>
-
+  <script src="./js/script.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
