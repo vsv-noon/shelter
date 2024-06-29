@@ -27,7 +27,7 @@ html {
 .header-wrapper {
   margin: 0 auto;
   max-width: 1200px;
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
 
@@ -110,22 +110,36 @@ html {
 
 .start-screen {
   width: 100%;
-  height: 908px;
+  /* height: auto; */
+  /* height: 908px; */
   background: url(../images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.start-screen-img {
+  max-width: 698px;
+  width: 100%;
+  height: 728px;
+  background-image: url(../images/start-screen-puppy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 180px;
 }
 
 .start-screen-wrapper {
   max-width: 1200px;
+  width: 95%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
 }
 
 .start-screen-info {
   width: 41.8%;
-  margin-top: 345px;
   display: flex;
   flex-direction: column;
   gap: 42px;
+  margin-top: 345px;
 }
 
 .start-screen-info h2 {
@@ -167,37 +181,38 @@ html {
   background: #fddcc4;
 }
 
-.start-screen-pic {
-  width: 698px;
-  height: 728px;
-  background-image: url(../images/start-screen-puppy.png);
-  background-repeat: no-repeat;
-  margin-top: 180px;
-}
-
 .about-wrapper {
   max-width: 1200px;
-  height: 588px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 120px;
   padding-top: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
-.about-pic {
+.about-img {
   width: 300px;
   height: 408px;
   background-image: url(../images/about-pets.png);
 }
 
 .about-info {
-  width: 430px;
+  width: 36%;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding-top: 15px;
+}
+
+h3 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+
 }
 
 .our-friends-pets h3,
@@ -206,17 +221,57 @@ html {
 #help h3,
 #in-addition h3 {
   width: 79%;
-  font-family: Georgia, serif;
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 45.5px;
-  letter-spacing: 0.06em;
   color: #545454;
 }
 
 .our-friends-main h3 {
-  max-width: 30%;
   text-align: center;
+}
+
+#help h3 {
+  width: 30%;
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+
+.footer-div h3 {
+  text-align: left;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+.tab-item h4,
+.slide h4 {
+  text-align: center;
+}
+
+#help h4 {
+  text-align: center;
+  color: #545454;
+}
+
+.credit-card h4 {
+  color: #545454;
+}
+
+.tabs-pagination h4 {
+  color: #292929;
+}
+
+#in-addition h5 {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .about-info p {
@@ -232,13 +287,15 @@ html {
 }
 
 .our-friends-wrapper {
-  min-width: 1200px;
-  height: 877px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
   padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .our-friends-button {
@@ -263,10 +320,12 @@ html {
 }
 
 .our-friends-slider {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 53px;
+  /* gap: 4.6%; */
 }
 
 .slider-arrow-left,
@@ -289,16 +348,11 @@ html {
 }
 
 .slider-wrapper {
-  width: 990px;
+  max-width: 990px;
+  width: 95%;
   display: flex;
   gap: 90px;
   overflow: hidden;
-}
-
-.tabs-wrapper {
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .tab-item,
@@ -320,16 +374,6 @@ html {
 .slide-img {
   width: 270px;
   height: 270px;
-}
-
-.tab-item h4,
-.slide h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22.72px;
-  letter-spacing: 0.06em;
-  text-align: center;
 }
 
 .tab-item-button,
@@ -358,35 +402,20 @@ html {
 
 .help-wrapper {
   max-width: 1200px;
-  height: 611px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-}
-
-#help h3 {
-  max-width: 30%;
-  text-align: center;
-  margin: 80px 0 5px 0;
-}
-
-#help h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #545454;
 }
 
 .ul-help {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 44px;
+
 }
 
 .help-item {
@@ -395,7 +424,7 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin: 26px 60px;
+  margin: 0 60px 55px 60px;
 }
 
 #in-addition {
@@ -405,15 +434,16 @@ html {
 
 .in-addition-wrapper {
   max-width: 1200px;
-  height: 462px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 30px;
   padding-top: 80px;
+  padding-bottom: 98px;
 }
 
-.in-addition-pic {
+.in-addition-img {
   width: 505px;
   height: 261px;
   background-image: url(../images/donation-dog.png);
@@ -446,7 +476,6 @@ html {
   gap: 15px;
   background: #f1cdb3;
   border-radius: 9px;
-  /* padding: 10px 15px; */
   transition: all 0.5s ease;
 }
 
@@ -454,56 +483,25 @@ html {
   background: #fddcc4;
 }
 
-.credit-card h4 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
-
-#in-addition h5 {
-  font-family: Georgia, serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 16.5px;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
-
 footer {
+  width: 100%;
+  height: 100%;
   background: url(../images/noise_lines_transparent.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
 }
 
 .footer-wrapper {
   max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
-  height: 350px;
   display: flex;
+  justify-content: space-between;
   padding-top: 40px;
 }
 
-.footer-div h3 {
-  font-family: Georgia, serif;
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 45.5px;
-  letter-spacing: 0.06em;
-  text-align: left;
-  color: rgba(255, 255, 255, 1);
-}
-
-.footer-div h4 {
-  font-family: Georgia;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  text-align: left;
-  color: #f1cdb3;
-  transition: all 0.5s ease;
+.footer-info {
+  width: 73.5%;
+  display: flex;
+  gap: 160px;
 }
 
 .footer-link {
@@ -518,6 +516,12 @@ footer {
   scale: 0.95;
 }
 
+.footer-div h4 {
+  text-align: left;
+  color: #f1cdb3;
+  transition: all 0.5s ease;
+}
+
 .footer-div svg path {
   transition: all 0.5s ease;
 }
@@ -528,22 +532,21 @@ footer {
 }
 
 .footer-div {
-  width: 302px;
   padding-top: 15px;
 }
 
 .footer-div.left-column {
+  width: 279px;
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin-right: 135px;
 }
 
 .footer-div.right-column {
+  width: 302px;
   display: flex;
   flex-direction: column;
   gap: 33px;
-  margin-right: 160px;
 }
 
 /* Pets.html */
@@ -552,31 +555,30 @@ footer {
   background: #f6f6f6;
 }
 
+.our-friends-pets h3 {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
 .our-friends-wrapper-pets {
   max-width: 1200px;
-  height: 1342px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
+  padding-bottom: 99px;
 }
 
 .tabs-wrapper {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.tabs-top-row,
-.tabs-bottom-row {
-  display: flex;
-  gap: 40px;
-}
-
-.our-friends-pets h3 {
-  text-align: center;
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 0;
+  overflow: hidden;
+  column-gap: 40px;
+  row-gap: 30px;
 }
 
 .tab-item:last-child {
@@ -586,6 +588,7 @@ footer {
 .tabs-pagination {
   display: flex;
   gap: 20px;
+  margin-top: 60px;
 }
 
 .btn-left-left,
@@ -620,14 +623,4 @@ footer {
 
 .tabs-pagination .disabled svg path {
   fill: #cdcdcd;
-}
-
-.tabs-pagination h4 {
-  font-family: Georgia;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #292929;
-
 }
