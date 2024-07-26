@@ -31,7 +31,6 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: 999; */
   transition: all 0.5 linear;
 }
 
@@ -99,14 +98,14 @@ html {
 }
 
 .nav-main-page .nav-link {
-  color: #FAFAFA;
+  color: #cdcdcd;
 }
 
 .nav-pets-page h1,
 .nav-pets-page h2,
 .nav-pets-page .nav-link,
 .nav-pets-page .nav-active {
-  color: rgb(84, 84, 84);
+  color: #545454;
 }
 
 .nav-menu-list {
@@ -126,7 +125,15 @@ html {
 
 @media (hover:hover) and (pointer:fine) {
   .nav-link:hover {
-    color: #fddcc4;
+    color: #fafafa;
+    transition: all 0.5s ease;
+  }
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .nav-pets-page .nav-link:hover {
+    color: #292929;
+    transition: all 0.5s ease;
   }
 }
 
@@ -136,7 +143,7 @@ html {
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  color: #FAFAFA;
+  color: #fafafa;
   height: 26px;
   transition: all 0.5s ease;
   border-bottom: 3px solid #F1CDB3;
@@ -568,8 +575,8 @@ footer {
 
 @media (hover:hover) and (pointer:fine) {
   .footer-link:hover h4 {
-    color: #fddcc4;
-    scale: 0.95;
+    color: #fafafa;
+    transition: all 0.5s ease;
   }
 }
 
@@ -585,8 +592,8 @@ footer {
 
 @media (hover:hover) and (pointer:fine) {
   .footer-div a:hover svg path {
-    fill: #fddcc4;
-    scale: 0.95;
+    fill: #fafafa;
+    transition: all 0.5s ease;
   }
 }
 
@@ -652,7 +659,6 @@ footer {
 
 .btn-left-left,
 .btn-left,
-.btn-current-item,
 .btn-right,
 .btn-right-right {
   width: 52px;
@@ -664,6 +670,18 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+
+.btn-current-item {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  pointer-events: none;
+  background: #f1cdb3;
 }
 
 @media (hover:hover) and (pointer:fine) {
