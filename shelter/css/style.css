@@ -680,8 +680,10 @@ footer {
   align-items: center;
   border: 2px solid #f1cdb3;
   border-radius: 50%;
-  pointer-events: none;
+  /* pointer-events: none; */
+  cursor: pointer;
   background: #f1cdb3;
+  transition: all 0.5s ease;
 }
 
 @media (hover:hover) and (pointer:fine) {
