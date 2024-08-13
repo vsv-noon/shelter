@@ -560,12 +560,6 @@ footer {
   padding-top: 40px;
 }
 
-.footer-info {
-  width: 73.5%;
-  display: flex;
-  gap: 160px;
-}
-
 .footer-link {
   display: flex;
   align-items: center;
