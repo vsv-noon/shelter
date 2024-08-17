@@ -6,7 +6,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth !important;
   text-decoration: none;
-  list-style: none;
 }
 
 body,
@@ -111,6 +110,7 @@ html {
 .nav-menu-list {
   display: flex;
   gap: 35px;
+  list-style: none;
 }
 
 .nav-link {
@@ -475,6 +475,7 @@ h4 {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 44px;
+  list-style: none;
 
 }
 
