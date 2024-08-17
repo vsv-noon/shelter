@@ -18,7 +18,7 @@
   margin: 50px 20px 50px 30px;
 }
 
-.close-btn {
+.modal-close-btn {
   position: absolute;
   right: -42px;
   top: -52px;
@@ -27,6 +27,13 @@
   background: none;
   border: 2px solid #f1cdb3;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.modal-close-btn:hover {
+  border: 2px solid #fddcc4;;
+  background: #fddcc4;
 }
 
 .modal-title {
@@ -105,6 +112,38 @@
     font-size: 13px;
     line-height: 14.3px;
     margin-bottom: 20px;
+  }
+
+  .modal-ul {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal {
+    width: 240px;
+    height: 341px;
+  }
+
+  .modal-close-btn {
+    right: -32px;
+    top: -52px;
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  .modal-title {
+    text-align: center;
+  }
+
+  .modal-subtitle {
+    text-align: center;
+  }
+
+  .modal-description {
+    margin-bottom: 24px;
   }
 
   .modal-ul {
