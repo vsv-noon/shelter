@@ -18,6 +18,19 @@ hamburgerMenu.addEventListener('click', () => {
   overlay.classList.toggle('overlay-on');
 });
 
+const overlayOn = () => {
+  const overlayOn = document.createElement('div');
+  overlayOn.classList.add('overlay-on');
+  document.body.appendChild(overlayOn);
+  document.body.style.overflow = 'hidden';
+}
+
+const overlayOff = () => {
+  document.querySelector('.modal').remove();
+       document.querySelector('.overlay-on').remove();
+       document.body.style.overflow = '';
+}
+
 document.addEventListener('click', (e) => {
   console.log(e.target);
   if (!navMenu.contains(e.target)
@@ -29,5 +42,53 @@ document.addEventListener('click', (e) => {
     navMenu.classList.remove('nav-menu-active');
     overlay.classList.remove('overlay-on');
   }
+
+     target = e.target.closest('.modal-close-btn');
+     if (target) {
+       overlayOff();
+     }
 });
+
+// Modal
+
+const ourFriendsCard = document.querySelectorAll('.our-friends-card');
+const closeButton = document.querySelector('.modal-close-btn');
+
+const createElementPopup = () => {
+  const modalCard = document.createElement('div');
+  modalCard.classList.add('modal');
+  modalCard.innerHTML = `
+    <button class="modal-close-btn">
+      <img src="./icons/close-btn.svg" alt="close-button">
+    </button>
+    <img class="modal-img" src="./images/pets-jennifer.png" alt="">
+    <div class="modal-info">
+      <h3 class="modal-title">Jennifer</h3>
+      <h4 class="modal-subtitle">Dog - Labrador</h4>
+      <p class="modal-description">
+        Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+      </p>
+      <ul class="modal-ul">
+        <li><span>Age:</span> 2 months</li>
+        <li><span>Inoculations:</span> none</li>
+        <li><span>Diseases:</span> none</li>
+        <li><span>Parasites:</span> none</li>
+      </ul>
+    </div>  `
+
+  document.body.appendChild(modalCard);
+}
+
+ourFriendsCard.forEach((el) => {
+  el.addEventListener('click', () => {
+    overlayOn();
+    createElementPopup();
+    console.log('first')
+  });
+
+})
+
+
+
+
 
