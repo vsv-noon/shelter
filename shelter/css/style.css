@@ -23,7 +23,7 @@ html {
 
 .overlay-on {
   position: fixed;
-  background: #000000dc;
+  background: rgba(41, 41, 41, 0.6);
   top: 0;
   bottom: 0;
   right: 0;
@@ -443,6 +443,7 @@ h4 {
   border: 2px solid #f1cdb3;
   border-radius: 30px;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 @media (hover:hover) and (pointer:fine) {

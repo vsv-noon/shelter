@@ -43,8 +43,10 @@ document.addEventListener('click', (e) => {
     overlay.classList.remove('overlay-on');
   }
 
-     target = e.target.closest('.modal-close-btn');
-     if (target) {
+     let target = e.target.closest('.modal-close-btn');
+     let classes = e.target.classList;
+
+     if (target || classes.contains('overlay-on')) {
        overlayOff();
      }
 });
@@ -54,7 +56,7 @@ document.addEventListener('click', (e) => {
 const ourFriendsCard = document.querySelectorAll('.our-friends-card');
 const closeButton = document.querySelector('.modal-close-btn');
 
-const createElementPopup = () => {
+function createElementPopup() {
   const modalCard = document.createElement('div');
   modalCard.classList.add('modal');
   modalCard.innerHTML = `
@@ -83,7 +85,6 @@ ourFriendsCard.forEach((el) => {
   el.addEventListener('click', () => {
     overlayOn();
     createElementPopup();
-    console.log('first')
   });
 
 })
