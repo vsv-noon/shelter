@@ -155,14 +155,14 @@ html {
   width: 100%;
   /* height: auto; */
   /* height: 908px; */
-  background: url(../images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url(../assets/images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
 .start-screen-img {
   max-width: 698px;
   width: 100%;
   height: 728px;
-  background-image: url(../images/start-screen-puppy.png);
+  background-image: url(../assets/images/start-screen-puppy.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -240,7 +240,7 @@ html {
 .about-img {
   width: 300px;
   height: 408px;
-  background-image: url(../images/about-pets.png);
+  background-image: url(../assets/images/about-pets.png);
 }
 
 .about-info {
@@ -509,7 +509,7 @@ h4 {
 .in-addition-img {
   width: 505px;
   height: 261px;
-  background-image: url(../images/donation-dog.png);
+  background-image: url(../assets/images/donation-dog.png);
   margin-top: 10px;
 }
 
@@ -551,7 +551,7 @@ h4 {
 footer {
   width: 100%;
   height: 100%;
-  background: url(../images/noise_lines_transparent.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+  background: url(../assets/images/noise_lines_transparent.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
 }
 
 .footer-wrapper {
