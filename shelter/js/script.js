@@ -34,7 +34,7 @@ const overlayOff = () => {
 };
 
 document.addEventListener('click', (e) => {
-  console.log(e.target);
+  // console.log(e.target);
   if (
     (!navMenu.contains(e.target) && e.target !== hamburgerMenu) ||
     e.target.classList.contains('nav-link') ||
@@ -65,21 +65,16 @@ fetch('./data/pets.json')
   .then((response) => response.json())
   .then((data) => {
     cards = data;
-    console.log(cards);
-    addDataToHTML();
+     addSlidesToHTML();
   });
 
-function addDataToHTML() {
+function addSlidesToHTML() {
   let listCardsHTML = document.querySelector('.slider-wrapper');
 
   if (cards != null) {
     cards.forEach((card) => {
       let newCard = document.createElement('div');
-      // let link = document.createElement('a');
-      // link.href = 'index.html?id=' + card.id;
-      // newCard.appendChild(link);
-      // newCard.href = 'index.html?id=' + card.id;
-      // newCard = document.createElement('a');
+      newCard.id = `${card.id}`
       newCard.classList.add('slide');
       newCard.classList.add('our-friends-card');
       newCard.innerHTML = `<img class="slide-img" src="${card.img}" alt="${card.name}">
@@ -90,32 +85,33 @@ function addDataToHTML() {
   }
 }
 
-function createElementPopup(card) {
+function createElementPopup(currentId) {
+  let thisCard = cards.filter(value => value.id == currentId)[0];
+
   const modalCard = document.createElement('div');
+
   modalCard.classList.add('modal');
   modalCard.innerHTML = `
     <button class="modal-close-btn">
       <img src="./assets/icons/close-btn.svg" alt="close-button">
     </button>
-    <img class="modal-img" src="./assets/images/pets-jennifer.png" alt="">
+    <img class="modal-img" src="${thisCard.img}" alt="">
     <div class="modal-info">
-      <h3 class="modal-title"></h3>
-      <h4 class="modal-subtitle">Dog - Labrador</h4>
-      <p class="modal-description">
-        Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
-      </p>
+      <h3 class="modal-title">${thisCard.name}</h3>
+      <h4 class="modal-subtitle">${thisCard.type} - ${thisCard.breed}</h4>
+      <p class="modal-description">${thisCard.description}</p>
       <ul class="modal-ul">
-        <li><span>Age:</span> 2 months</li>
-        <li><span>Inoculations:</span> none</li>
-        <li><span>Diseases:</span> none</li>
-        <li><span>Parasites:</span> none</li>
+        <li><span>Age:</span> ${thisCard.age}</li>
+        <li><span>Inoculations:</span> ${thisCard.inoculations}</li>
+        <li><span>Diseases:</span> ${thisCard.diseases}</li>
+        <li><span>Parasites:</span> ${thisCard.parasites}</li>
       </ul>
     </div>  `;
 
   document.body.appendChild(modalCard);
 }
 
-console.log(ourFriendsCard)
+// console.log(ourFriendsCard)
 
 // ourFriendsCard.forEach((el) => {
 //   el.addEventListener('click', () => {
@@ -124,11 +120,17 @@ console.log(ourFriendsCard)
 //   });
 // });
 
-document.addEventListener('click', (e) => {
-  let target = e.target.closest('.slide');
-  if (target) {
-    e.preventDefault();
-    overlayOn();
-    createElementPopup();
-  }
-})
+(function showPopup() {
+
+  document.addEventListener('click', (e) => {
+    let target = e.target.closest('.slide');
+
+    if (target) {
+      // e.preventDefault();
+      overlayOn();
+      createElementPopup(target.id);
+      // console.log(target.id);
+    }
+  })
+})()
+

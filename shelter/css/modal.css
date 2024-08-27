@@ -105,7 +105,8 @@
   color: #F1CDB3;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
+@media (max-width: 990px) {
   .modal {
     width: 630px;
     height: 350px;
@@ -130,7 +131,8 @@
   }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) { */
+@media (max-width: 733px) {
   .modal {
     width: 240px;
     height: 341px;
