@@ -366,7 +366,7 @@ h4 {
   }
 }
 
-.our-friends-slider {
+.wrapper-our-friends-slider {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -402,7 +402,7 @@ h4 {
   width: 95%;
   display: flex;
   gap: 90px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .tab-item,

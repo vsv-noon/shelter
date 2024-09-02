@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 // import { pets } from "../data/pets";
 
 const hamburgerMenu = document.querySelector('.hamburger-button');
@@ -54,40 +56,68 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Modal
+// create Slides & Tabs
 
 const ourFriendsCard = document.querySelectorAll('.our-friends-card');
 const closeButton = document.querySelector('.modal-close-btn');
 
-let cards = null;
+// let cards = null;
+let cards = [];
 
 fetch('./data/pets.json')
   .then((response) => response.json())
   .then((data) => {
-    cards = data;
-     addSlidesToHTML();
+    // cards = data;
+    cards.push(...data);
+     addCardsToHTML();
   });
 
-function addSlidesToHTML() {
-  let listCardsHTML = document.querySelector('.slider-wrapper');
+  // console.log(cards);
+let listCardsHTML = document.querySelector('.cards-wrapper');
+
+function addCardsToHTML() {
 
   if (cards != null) {
+    listCardsHTML.innerHTML = '';
     cards.forEach((card) => {
-      let newCard = document.createElement('div');
-      newCard.id = `${card.id}`
-      newCard.classList.add('slide');
-      newCard.classList.add('our-friends-card');
-      newCard.innerHTML = `<img class="slide-img" src="${card.img}" alt="${card.name}">
-         <h4 class="card-title">${card.name}</h4>
-         <button class="slide-button">Learn more</button>`;
+      // let newCard = document.createElement('div');
+      // newCard.id = `${card.id}`
+      // newCard.classList.add('slide');
+      // newCard.classList.add('our-friends-card');
+      // newCard.innerHTML = `<img class="slide-img" src="${card.img}" alt="${card.name}">
+      //    <h4 class="card-title">${card.name}</h4>
+      //    <button class="slide-button">Learn more</button>`;
+      const newCard = createCardElement(card);
       listCardsHTML.appendChild(newCard);
     });
   }
+
+  // if (cards != null) {
+  //   cards.forEach((card) => {
+  //     card.document.querySelector('.slide-img').src = card.img;
+  //     card.innerHTML = `<img class="slide-img" src="${card.img}" alt="${card.name}">
+  // //        <h4 class="card-title">${card.name}</h4>
+  // //        <button class="slide-button">Learn more</button>`;
+  //   })
+  // }
 }
+
+function createCardElement(card) {
+  let newCard = document.createElement('div');
+  newCard.id = `${card.id}`
+  newCard.classList.add('slide');
+  newCard.classList.add('our-friends-card');
+  newCard.innerHTML = `<img class="slide-img" src="${card.img}" alt="${card.name}">
+     <h4 class="card-title">${card.name}</h4>
+     <button class="slide-button">Learn more</button>`;
+
+     return newCard;
+}
+
+// Modal
 
 function createElementPopup(currentId) {
   let thisCard = cards.filter(value => value.id == currentId)[0];
-
   const modalCard = document.createElement('div');
 
   modalCard.classList.add('modal');
@@ -111,26 +141,27 @@ function createElementPopup(currentId) {
   document.body.appendChild(modalCard);
 }
 
-// console.log(ourFriendsCard)
-
-// ourFriendsCard.forEach((el) => {
-//   el.addEventListener('click', () => {
-//     overlayOn();
-//     createElementPopup();
-//   });
-// });
-
 (function showPopup() {
 
   document.addEventListener('click', (e) => {
     let target = e.target.closest('.slide');
 
     if (target) {
-      // e.preventDefault();
       overlayOn();
       createElementPopup(target.id);
-      // console.log(target.id);
     }
   })
 })()
 
+// Slider
+
+
+
+  const wrapper = document.querySelector('.wrapper-our-friends-slider');
+  const slider = document.querySelector('.slider-wrapper');
+  const arrowButton = document.querySelectorAll('.arrow-button');
+  const firstSlideWidth = slider.querySelector('.slide').offsetWidth;
+  const sliderChildren = [...slider.children];
+  const slides = document.querySelectorAll('.slide');
+  console.log(firstSlideWidth);
+})

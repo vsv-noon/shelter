@@ -46,7 +46,7 @@
     width: 58.8%;
   }
 
-  .our-friends-slider {
+  .wrapper-our-friends-slider {
     width: 708px;
     height: 435px;
     gap: 12px;
@@ -224,7 +224,7 @@
     background: #fff;
   }
 
-  .our-friends-slider {
+  .wrapper-our-friends-slider {
     position: relative;
     width: 270px;
     height: 507px;
@@ -366,7 +366,7 @@
     margin-bottom: 5px;
   }
 
-  .our-friends-slider {
+  .wrapper-our-friends-slider {
     margin-bottom: 79px;
   }
 
