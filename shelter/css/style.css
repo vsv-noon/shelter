@@ -401,8 +401,15 @@ h4 {
   max-width: 990px;
   width: 95%;
   display: flex;
-  gap: 90px;
+  /* gap: 90px; */
   /* overflow: hidden; */
+}
+
+.slider-track {
+  /* max-width: 990px; */
+  /* width: 95%; */
+  display: flex;
+  gap: 90px;
 }
 
 .tab-item,
