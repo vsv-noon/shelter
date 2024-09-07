@@ -402,7 +402,7 @@ h4 {
   width: 95%;
   display: flex;
   /* gap: 90px; */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .slider-track {

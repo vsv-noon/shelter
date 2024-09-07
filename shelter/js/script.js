@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function addCardsToHTML() {
     if (cards != null) {
-      listCardsHTML.innerHTML = '';
+      // listCardsHTML.innerHTML = '';
       cards.forEach((card) => {
         const newCard = createCardElement(card);
-        listCardsHTML.appendChild(newCard);
+        // listCardsHTML.appendChild(newCard);
       });
     }
   }
@@ -154,9 +154,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const wrapper = document.querySelector('.wrapper-our-friends-slider');
   const slider = document.querySelector('.slider-wrapper');
-  const arrowButton = document.querySelectorAll('.arrow-button');
-  const firstSlideWidth = slider.querySelector('.slide').offsetWidth;
-  const sliderChildren = [...slider.children];
-  // const slides = document.querySelectorAll('.slide');
-  console.log(firstSlideWidth);
+  const arrowButtons = document.querySelectorAll('.arrow-button');
+  const firstSlideWidth = 270 + 90;
+  const sliderTrackChildren = [...sliderTrack.children];
+
+  console.log(sliderTrack.children);
+
+  let cardPerView = Math.round(slider.offsetWidth - firstSlideWidth);
+  slides.slice(-cardPerView).reverse().forEach(card => {
+    addSlidesToHTML(card);
+  })
+  console.log(cardPerView)
+
+  arrowButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      slider.scrollLeft += btn.id === 'left' ? -firstSlideWidth * 3 : firstSlideWidth * 3;
+    })
+  })
 });
