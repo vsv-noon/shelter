@@ -55,32 +55,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // create Slides & Tabs
+  // create Slides
 
   const ourFriendsCard = document.querySelectorAll('.our-friends-card');
   const closeButton = document.querySelector('.modal-close-btn');
 
-  const listCardsHTML = document.querySelector('.cards-wrapper');
-
   let slides = [];
-  let cards = [];
+  // let cards = [];
 
-  fetch('./data/pets.json')
-    .then((response) => response.json())
-    .then((data) => {
-      cards.push(...data);
-      addCardsToHTML();
-    });
+  // fetch('./data/pets.json')
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     cards.push(...data);
+  //     addCardsToHTML();
+  //   });
 
-  function addCardsToHTML() {
-    if (cards != null) {
-      listCardsHTML.innerHTML = '';
-      cards.forEach((card) => {
-        const newCard = createCardElement(card);
-        listCardsHTML.appendChild(newCard);
-      });
-    }
-  }
+  // function addCardsToHTML() {
+  //   if (cards != null) {
+  //     cardsList.innerHTML = '';
+  //     cards.forEach((card) => {
+  //       const newCard = createCardElement(card);
+  //       cardsList.appendChild(newCard);
+  //     });
+  //   }
+  // }
 
   fetch('./data/pets.json')
     .then((response) => response.json())
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createElementPopup(currentName) {
     // let thisCard = cards.filter((value) => value.id == currentId)[0];
-    let thisCard = cards.filter((value) => value.name == currentName)[0];
+    let thisCard = slides.filter((value) => value.name == currentName)[0];
 
     const modalCard = document.createElement('div');
 
@@ -166,7 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let cardPerView = Math.round(slider.offsetWidth - firstSlideWidth);
 
   arrowButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (document.querySelector('.slider-wrapper').children.length <= 8) {
         slides.reverse().forEach((card) => {
           const newCard = createCardElement(card);
@@ -178,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
       // console.log(document.querySelector('.slider-wrapper').children.length);
-
+      
       if (document.body.clientWidth > 1275) {
         slider.scrollLeft +=
           btn.id === 'left'
