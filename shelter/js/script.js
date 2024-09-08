@@ -60,8 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const ourFriendsCard = document.querySelectorAll('.our-friends-card');
   const closeButton = document.querySelector('.modal-close-btn');
 
+  const listCardsHTML = document.querySelector('.cards-wrapper');
+
   let slides = [];
   let cards = [];
+
+  fetch('./data/pets.json')
+    .then((response) => response.json())
+    .then((data) => {
+      cards.push(...data);
+      addCardsToHTML();
+    });
+
+  function addCardsToHTML() {
+    if (cards != null) {
+      listCardsHTML.innerHTML = '';
+      cards.forEach((card) => {
+        const newCard = createCardElement(card);
+        listCardsHTML.appendChild(newCard);
+      });
+    }
+  }
 
   fetch('./data/pets.json')
     .then((response) => response.json())
@@ -70,32 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
       addSlidesToHTML();
     });
 
-    fetch('./data/pets.json')
-    .then((response) => response.json())
-    .then((data) => {
-      cards.push(...data);
-      addCardsToHTML();
-    });
-
-  const sliderTrack = document.querySelector('.slider-track');
-  const listCardsHTML = document.querySelector('.cards-wrapper');
-
   function addSlidesToHTML() {
     if (slides != null) {
-      sliderTrack.innerHTML = '';
+      slider.innerHTML = '';
+
       slides.forEach((card) => {
         const newCard = createCardElement(card);
-        sliderTrack.appendChild(newCard);
-      });
-    }
-  }
-
-  function addCardsToHTML() {
-    if (cards != null) {
-      // listCardsHTML.innerHTML = '';
-      cards.forEach((card) => {
-        const newCard = createCardElement(card);
-        // listCardsHTML.appendChild(newCard);
+        slider.appendChild(newCard);
       });
     }
   }
@@ -114,8 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Modal
 
-  function createElementPopup(currentId) {
-    let thisCard = cards.filter((value) => value.id == currentId)[0];
+  function createElementPopup(currentName) {
+    // let thisCard = cards.filter((value) => value.id == currentId)[0];
+    let thisCard = cards.filter((value) => value.name == currentName)[0];
+
     const modalCard = document.createElement('div');
 
     modalCard.classList.add('modal');
@@ -145,7 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (target) {
         overlayOn();
-        createElementPopup(target.id);
+        // createElementPopup(target.id);
+        createElementPopup(target.children[1].textContent);
+        // console.log(target.children[1].textContent);
       }
     });
   })();
@@ -155,20 +159,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.wrapper-our-friends-slider');
   const slider = document.querySelector('.slider-wrapper');
   const arrowButtons = document.querySelectorAll('.arrow-button');
+  // const firstSlideWidth = slider.querySelector('.slide').offsetWidth;
   const firstSlideWidth = 270 + 90;
-  const sliderTrackChildren = [...sliderTrack.children];
-
-  console.log(sliderTrack.children);
+  const sliderChildren = [...slider.children];
 
   let cardPerView = Math.round(slider.offsetWidth - firstSlideWidth);
-  slides.slice(-cardPerView).reverse().forEach(card => {
-    addSlidesToHTML(card);
-  })
-  console.log(cardPerView)
 
-  arrowButtons.forEach(btn => {
+  arrowButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      slider.scrollLeft += btn.id === 'left' ? -firstSlideWidth * 3 : firstSlideWidth * 3;
-    })
-  })
+      if (document.querySelector('.slider-wrapper').children.length <= 8) {
+        slides.reverse().forEach((card) => {
+          const newCard = createCardElement(card);
+          slider.prepend(newCard);
+        });
+        slides.reverse().forEach((card) => {
+          const newCard = createCardElement(card);
+          slider.appendChild(newCard);
+        });
+      }
+      // console.log(document.querySelector('.slider-wrapper').children.length);
+
+      if (document.body.clientWidth > 1275) {
+        slider.scrollLeft +=
+          btn.id === 'left'
+            ? -firstSlideWidth * 3
+            : firstSlideWidth * 3;
+      } else if (document.body.clientWidth > 767) {
+        slider.scrollLeft +=
+          btn.id === 'left'
+            ? -firstSlideWidth * 2
+            : firstSlideWidth * 2;
+      } else {
+        slider.scrollLeft +=
+          btn.id === 'left' ? -firstSlideWidth : firstSlideWidth;
+      }
+    });
+  });
+
+  const infinityScroll = () => {
+    if (slider.scrollLeft === 0) {
+      slider.classList.add('no-transition');
+      slider.scrollLeft = slider.scrollWidth - (6 * slider.offsetWidth);
+      slider.classList.remove('no-transition');
+    } else if (
+      Math.ceil(slider.scrollLeft) ===
+      slider.scrollWidth - slider.offsetWidth
+    ) {
+      slider.classList.add('no-transition');
+      slider.scrollLeft = slider.offsetWidth * 2.5;
+      slider.classList.remove('no-transition');
+    }
+  };
+
+  slider.addEventListener('scroll', infinityScroll);
 });

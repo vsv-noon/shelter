@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   text-decoration: none;
 }
 
@@ -401,19 +401,25 @@ h4 {
   max-width: 990px;
   width: 95%;
   display: flex;
-  /* gap: 90px; */
-  overflow: hidden;
+  gap: 90px;
+  /* overflow: hidden; */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
 }
 
-.slider-track {
-  /* max-width: 990px; */
-  /* width: 95%; */
-  display: flex;
-  gap: 90px;
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.no-transition {
+  scroll-behavior: auto;
 }
 
 .tab-item,
 .slide {
+  scroll-snap-align: start;
   width: 270px;
   height: 435px;
   display: flex;
