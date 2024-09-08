@@ -180,8 +180,8 @@ function checkDateEntrance(date, period) {
     console.log(week2);
   }
   if (date >= new Date(periods[4]) && date <= new Date(periods[5])) {
-    // console.log(week3);
-    console.log('week3');
+    console.log(week3);
+    // console.log('week3');
   }
 }
 
