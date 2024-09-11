@@ -409,7 +409,7 @@ h4 {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: 0;
+  scrollbar-width: none;
 }
 
 .slider-wrapper::-webkit-scrollbar {
