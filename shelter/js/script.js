@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
   // import { pets } from "../data/pets";
 
   // const hamburgerMenu = document.querySelector('.hamburger-button');
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //       });
   //     }
   //     // console.log(document.querySelector('.slider-wrapper').children.length);
-      
+
   //     if (document.body.clientWidth > 1275) {
   //       slider.scrollLeft +=
   //         btn.id === 'left'
@@ -211,4 +211,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // };
 
   // slider.addEventListener('scroll', infinityScroll);
-});
+// });

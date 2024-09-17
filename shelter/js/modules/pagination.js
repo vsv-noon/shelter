@@ -18,16 +18,23 @@ const paginate = (pets) => {
   //   }
   // }
 
-  let arr = [
-    ...pets,
-    ...pets.reverse(),
-    ...pets.reverse(),
-    ...pets.reverse(),
-    ...pets.reverse(),
-    ...pets.reverse(),
-  ];
+let arr = [
+  ...shuffle(pets),
+  ...shuffle(pets),
+  ...shuffle(pets),
+  ...shuffle(pets),
+  ...shuffle(pets),
+  ...shuffle(pets),
+]
 
-  console.log(arr);
+function shuffle(pets) {
+  let newArr = [...pets];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
 
   let petsCount = 0;
   let currentPage = 1;
@@ -111,6 +118,21 @@ const paginate = (pets) => {
         '.btn-current-item h4'
       ).textContent = `${currentPage}`;
     }
+
+    // window.addEventListener('resize', () => {
+    //   if (document.body.clientWidth > 1000 && currentPage < 6) {
+    //     btnNextPagination.classList.remove('disabled');
+    //     btnEndPagination.classList.remove('disabled');
+
+    //   } else if (document.body.clientWidth > 600 && currentPage < 8) {
+    //     btnNextPagination.classList.remove('disabled');
+    //     btnEndPagination.classList.remove('disabled');
+
+    //   } else {
+    //     currentPage = 16;
+
+    //   }
+    // })
 
     if (currentPage > 1) {
       btnPrevPagination.classList.remove('disabled');
