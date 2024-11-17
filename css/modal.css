@@ -1,0 +1,165 @@
+@import "./fonts.css";
+
+.modal {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background: #fafafa;
+  border-radius: 9px;
+  /* z-index: 300; */
+  box-shadow: 0px 2px 35px 14px #0D0D0D0A;
+  transition: all 0.8s ease;
+
+}
+
+.modal-img {
+  border-radius: 9px;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-info {
+  margin: 50px 20px 50px 30px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: -42px;
+  top: -52px;
+  width: 52px;
+  height: 52px;
+  background: none;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.modal-close-btn:hover {
+  border: 2px solid #fddcc4;;
+  background: #fddcc4;
+}
+
+.modal-title {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.modal-subtitle {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.modal-description {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 45px;
+}
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+.modal-ul li {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.07em;
+}
+
+.modal-ul li span {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.modal-ul li::marker {
+  color: #F1CDB3;
+}
+
+/* @media (max-width: 768px) { */
+@media (max-width: 990px) {
+  .modal {
+    width: 630px;
+    height: 350px;
+  }
+
+  .modal-info {
+    margin: 10px 9px 10px 11px;
+  }
+
+  .modal-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+    line-height: 14.3px;
+    margin-bottom: 20px;
+  }
+
+  .modal-ul {
+    gap: 5px;
+  }
+}
+
+/* @media (max-width: 320px) { */
+@media (max-width: 733px) {
+  .modal {
+    width: 240px;
+    height: 341px;
+  }
+
+  .modal-close-btn {
+    right: -32px;
+    top: -52px;
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  .modal-title {
+    text-align: center;
+  }
+
+  .modal-subtitle {
+    text-align: center;
+  }
+
+  .modal-description {
+    margin-bottom: 24px;
+  }
+
+  .modal-ul {
+    gap: 5px;
+  }
+}
